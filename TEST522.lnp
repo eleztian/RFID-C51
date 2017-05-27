@@ -1,0 +1,5 @@
+"bsp_sd.obj",
+"main.obj",
+"bsp_rc522.obj" 
+TO "TEST522" 
+RAMSIZE(256) 

@@ -1,0 +1,246 @@
+C51 COMPILER V9.54   BSP_SD                                                                03/02/2017 16:20:25 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE BSP_SD
+OBJECT MODULE PLACED IN bsp_sd.OBJ
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE bsp_sd.c OPTIMIZE(8,SPEED) BROWSE
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #include <stdio.h>
+   3          #include "bsp_sd.h"
+   4          unsigned char xdata DATA[512];
+   5          
+   6          void delayms(unsigned int count)
+   7          {
+   8   1          int i,j;                                                                               
+   9   1          for(i=0;i<count;i++)                                                                   
+  10   1             {
+  11   2            for(j=0;j<260;j++);
+  12   2             }                                                                                    
+  13   1      }
+  14          //===========================================================
+  15          //?????SD?,??SPI????
+  16          void SdWrite(unsigned char n)
+  17          {
+  18   1      
+  19   1          unsigned char i;
+  20   1      
+  21   1          for(i=8;i;i--)
+  22   1          {
+  23   2          SD_CLK=0;
+  24   2          SD_DI=(n&0x80);
+  25   2          n<<=1;
+  26   2          SD_CLK=1;
+  27   2          }
+  28   1          SD_DI=1;
+  29   1      }
+  30          //===========================================================
+  31          //?SD?????,??SPI????
+  32          unsigned char SdRead()
+  33          {
+  34   1          unsigned char n,i;
+  35   1          for(i=8;i;i--)
+  36   1          {
+  37   2              SD_CLK=0;
+  38   2              SD_CLK=1;
+  39   2              n<<=1;
+  40   2              if(SD_DO) n|=1;
+  41   2      
+  42   2          }
+  43   1          return n;
+  44   1      }
+  45          //============================================================
+  46          //??SD????
+  47          unsigned char SdResponse()
+  48          {
+  49   1          unsigned char i=0,response;
+  50   1      
+  51   1          while(i<=8)
+  52   1          {
+  53   2          response = SdRead();
+  54   2          if(response==0x00)
+  55   2          break;
+C51 COMPILER V9.54   BSP_SD                                                                03/02/2017 16:20:25 PAGE 2   
+
+  56   2          if(response==0x01)
+  57   2          break;
+  58   2          i++;
+  59   2          }
+  60   1          return response;
+  61   1      }
+  62          //================================================================
+  63          //????SD?
+  64          void SdCommand(unsigned char command, unsigned long argument, unsigned char CRC)
+  65          {
+  66   1      
+  67   1          SdWrite(command|0x40);
+  68   1          SdWrite(((unsigned char *)&argument)[0]);
+  69   1          SdWrite(((unsigned char *)&argument)[1]);
+  70   1          SdWrite(((unsigned char *)&argument)[2]);
+  71   1          SdWrite(((unsigned char *)&argument)[3]);
+  72   1          SdWrite(CRC);
+  73   1      }
+  74          //================================================================
+  75          //???SD?
+  76          unsigned char SdInit(void)
+  77          {
+  78   1          int delay=0, trials=0;
+  79   1          unsigned char i;
+  80   1          unsigned char response=0x01;
+  81   1      
+  82   1          SD_CS=1;
+  83   1          for(i=0;i<=9;i++)
+  84   1          SdWrite(0xff);
+  85   1          SD_CS=0;
+  86   1      
+  87   1          //Send Command 0 to put MMC in SPI mode
+  88   1          SdCommand(0x00,0,0x95);
+  89   1      
+  90   1      
+  91   1          response=SdResponse();
+  92   1      
+  93   1          if(response!=0x01)
+  94   1          {
+  95   2              return 0;
+  96   2          }
+  97   1      
+  98   1          while(response==0x01)
+  99   1          {
+ 100   2              SD_CS=1;
+ 101   2              SdWrite(0xff);
+ 102   2              SD_CS=0;
+ 103   2              SdCommand(0x01,0x00ffc000,0xff);
+ 104   2              response=SdResponse();
+ 105   2          }
+ 106   1      
+ 107   1          SD_CS=1;
+ 108   1          SdWrite(0xff);
+ 109   1          return 1;
+ 110   1      }
+ 111          //================================================================
+ 112          //?SD????????,????512??
+ 113          //unsigned char SdWriteBlock(unsigned char *Block, unsigned long address,int len)
+ 114          unsigned char SdWriteBlock(unsigned long address, unsigned char *Block, int len)
+ 115          {
+ 116   1          unsigned int count;
+ 117   1          unsigned char dataResp;
+C51 COMPILER V9.54   BSP_SD                                                                03/02/2017 16:20:25 PAGE 3   
+
+ 118   1          //Block size is 512 bytes exactly
+ 119   1          //First Lower SS
+ 120   1      
+ 121   1          SD_CS=0;
+ 122   1          //Then send write command
+ 123   1          SdCommand(0x18,address,0xff);
+ 124   1      
+ 125   1          if(SdResponse()==00)
+ 126   1          {
+ 127   2              SdWrite(0xff);
+ 128   2              SdWrite(0xff);
+ 129   2              SdWrite(0xff);
+ 130   2              //command was a success - now send data
+ 131   2              //start with DATA TOKEN = 0xFE
+ 132   2              SdWrite(0xfe);
+ 133   2              
+ 134   2              //for(count=0;count<1;count++) SdRead();
+ 135   2              
+ 136   2              //now send data
+ 137   2              for(count=0;count<len;count++) SdWrite(*Block++);
+ 138   2              //for(count=0;count<len;count++) SdWrite(count);
+ 139   2              //for(count=0;count<len;count++) SdWrite(0xFF);
+ 140   2              for(;count<512;count++) SdWrite(0);
+ 141   2              //data block sent - now send checksum
+ 142   2              SdWrite(0xff); //???CRC??, ?0XFFFF ?????CRC
+ 143   2              SdWrite(0xff);
+ 144   2              //Now read in the DATA RESPONSE token
+ 145   2              dataResp=SdRead();
+ 146   2              //Following the DATA RESPONSE token
+ 147   2              //are a number of BUSY bytes
+ 148   2              //a zero byte indicates the MMC is busy
+ 149   2      
+ 150   2              while(SdRead()==0);
+ 151   2      
+ 152   2              dataResp=dataResp&0x0f; //mask the high byte of the DATA RESPONSE token
+ 153   2              SD_CS=1;
+ 154   2              SdWrite(0xff);
+ 155   2              if(dataResp==0x0b)
+ 156   2              {
+ 157   3                  //printf("DATA WAS NOT ACCEPTED BY CARD -- CRC ERROR\n");
+ 158   3                  return 0;
+ 159   3              }
+ 160   2              if(dataResp==0x05)
+ 161   2                  return 1;
+ 162   2      
+ 163   2              //printf("Invalid data Response token.\n");
+ 164   2              return 0;
+ 165   2          }
+ 166   1          //printf("Command 0x18 (Write) was not received by the MMC.\n");
+ 167   1          return 0;
+ 168   1      }
+ 169          
+ 170          //=======================================================================
+ 171          //?SD?????????,????512??
+ 172          unsigned char SdReadBlock(unsigned char *Block, unsigned long address,int len)
+ 173          {
+ 174   1          unsigned int count;
+ 175   1          //Block size is 512 bytes exactly
+ 176   1          //First Lower SS
+ 177   1      
+ 178   1           //printf("MMC_read_block\n");
+ 179   1      
+C51 COMPILER V9.54   BSP_SD                                                                03/02/2017 16:20:25 PAGE 4   
+
+ 180   1          SD_CS=0;
+ 181   1          //Then send write command
+ 182   1          SdCommand(0x11,address,0xff);
+ 183   1      
+ 184   1          if(SdResponse()==00)
+ 185   1          {
+ 186   2              //command was a success - now send data
+ 187   2              //start with DATA TOKEN = 0xFE
+ 188   2              while(SdRead()!=0xfe);
+ 189   2      
+ 190   2              for(count=0;count<len;count++) *Block++=SdRead();
+ 191   2      
+ 192   2              for(;count<512;count++) SdRead();
+ 193   2      
+ 194   2              //data block sent - now send checksum
+ 195   2              SdRead();
+ 196   2              SdRead();
+ 197   2              //Now read in the DATA RESPONSE token
+ 198   2              SD_CS=1;
+ 199   2              SdRead();
+ 200   2              return 1;
+ 201   2          }
+ 202   1           //printf("Command 0x11 (Read) was not received by the MMC.\n");
+ 203   1          return 0;
+ 204   1      }
+ 205          
+ 206          void initbaud(void)
+ 207          {
+ 208   1          TMOD=0X20;
+ 209   1          TH1=0XFD;
+ 210   1          TL1=0XFD;
+ 211   1          PCON=0X00;
+ 212   1          TR1=1;
+ 213   1          SCON=0X50;//8?????
+ 214   1          //SCON=0X52;//8????? TI???
+ 215   1      }
+ 216          //============================================================
+ 217          //??? 
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    520    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =    512    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      28
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

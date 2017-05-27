@@ -1,0 +1,484 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+G:\ÎÄµµ\»ùÓÚRC522µÄÖÇÄÜÃÅËø\Ô´³ÌÐò\TEST522.uvproj
+Project File Date:  04/19/2016
+
+<h2>Output:</h2>
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(139): warning C280: 'admin': unreferenced local variable
+compiling RC522.C...
+compiling SDCard.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMER0INIT?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELETALLUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ADDUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELETUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?PCDHALT?RC522
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_READID?SDCARD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CHECKEXIST?SDCARD
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?MAIN
+    LENGTH:  0006H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_SDCOMMAND?SDCARD
+    LENGTH:  0006H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_DELETUSER?MAIN
+    LENGTH:  0005H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_CHECKEXIST?SDCARD
+    LENGTH:  0005H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?SDINIT?SDCARD
+    LENGTH:  0004H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_SDWRITEBLOCK?SDCARD
+    LENGTH:  0004H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_WRITEID?SDCARD
+    LENGTH:  0004H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_FM10MS?MAIN
+    LENGTH:  0001H
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  G_UCTEMPBUF
+    SEGMENT: ?DT?MAIN
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  NUM
+    SEGMENT: ?DT?MAIN
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  FLAG
+    SEGMENT: ?DT?MAIN
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  ?_SDCOMMAND?BYTE
+    SEGMENT: ?DT?_SDCOMMAND?SDCARD
+Program Size: data=164.0 xdata=512 code=3241
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(139): warning C280: 'admin': unreferenced local variable
+compiling RC522.C...
+compiling SDCard.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMER0INIT?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELETALLUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ADDUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELETUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?PCDHALT?RC522
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_READID?SDCARD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CHECKEXIST?SDCARD
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?MAIN
+    LENGTH:  0006H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_SDCOMMAND?SDCARD
+    LENGTH:  0006H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_DELETUSER?MAIN
+    LENGTH:  0005H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_CHECKEXIST?SDCARD
+    LENGTH:  0005H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?SDINIT?SDCARD
+    LENGTH:  0004H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_SDWRITEBLOCK?SDCARD
+    LENGTH:  0004H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_WRITEID?SDCARD
+    LENGTH:  0004H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_FM10MS?MAIN
+    LENGTH:  0001H
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  G_UCTEMPBUF
+    SEGMENT: ?DT?MAIN
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  NUM
+    SEGMENT: ?DT?MAIN
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  FLAG
+    SEGMENT: ?DT?MAIN
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  ?_SDCOMMAND?BYTE
+    SEGMENT: ?DT?_SDCOMMAND?SDCARD
+Program Size: data=164.0 xdata=512 code=3241
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(176): error C231: 'TH0': redefinition
+MAIN.C(176): error C231: 'TH0': redefinition
+MAIN.C(177): error C231: 'TL0': redefinition
+MAIN.C(177): error C231: 'TL0': redefinition
+MAIN.C(178): error C129: missing ';' before '++'
+compiling RC522.C...
+compiling SDCard.c...
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(19): error C141: syntax error near 'for'
+MAIN.C(19): error C141: syntax error near '=', expected ')'
+MAIN.C(19): error C129: missing ';' before '<'
+compiling RC522.C...
+compiling SDCard.c...
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(19): error C141: syntax error near 'for'
+MAIN.C(19): error C141: syntax error near '=', expected ')'
+MAIN.C(19): error C129: missing ';' before '<'
+compiling RC522.C...
+compiling SDCard.c...
+Target not created
+Build target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(11): error C141: syntax error near 'for'
+MAIN.C(11): error C141: syntax error near '=', expected ')'
+MAIN.C(11): error C129: missing ';' before '<'
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(11): error C141: syntax error near 'for'
+MAIN.C(11): error C141: syntax error near '=', expected ')'
+MAIN.C(11): error C129: missing ';' before '<'
+compiling RC522.C...
+compiling SDCard.c...
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(11): error C141: syntax error near 'for'
+MAIN.C(11): error C141: syntax error near '=', expected ')'
+MAIN.C(11): error C129: missing ';' before '<'
+compiling RC522.C...
+compiling SDCard.c...
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(11): error C141: syntax error near 'for'
+MAIN.C(11): error C141: syntax error near '=', expected ')'
+MAIN.C(11): error C129: missing ';' before '<'
+compiling RC522.C...
+compiling SDCard.c...
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(11): error C141: syntax error near 'for'
+MAIN.C(11): error C141: syntax error near '=', expected ')'
+MAIN.C(11): error C129: missing ';' before '<'
+compiling RC522.C...
+compiling SDCard.c...
+Target not created
+Build target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(11): error C141: syntax error near 'for'
+MAIN.C(11): error C141: syntax error near '=', expected ')'
+MAIN.C(11): error C129: missing ';' before '<'
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(11): error C141: syntax error near 'for'
+MAIN.C(11): error C141: syntax error near '=', expected ')'
+MAIN.C(11): error C129: missing ';' before '<'
+compiling RC522.C...
+compiling SDCard.c...
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(139): warning C280: 'admin': unreferenced local variable
+compiling RC522.C...
+compiling SDCard.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMER0INIT?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELETALLUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ADDUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELETUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?PCDHALT?RC522
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_READID?SDCARD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CHECKEXIST?SDCARD
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?MAIN
+    LENGTH:  0006H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_SDCOMMAND?SDCARD
+    LENGTH:  0006H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_DELETUSER?MAIN
+    LENGTH:  0005H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_CHECKEXIST?SDCARD
+    LENGTH:  0005H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?SDINIT?SDCARD
+    LENGTH:  0004H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_SDWRITEBLOCK?SDCARD
+    LENGTH:  0004H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_WRITEID?SDCARD
+    LENGTH:  0004H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_FM10MS?MAIN
+    LENGTH:  0001H
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  G_UCTEMPBUF
+    SEGMENT: ?DT?MAIN
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  NUM
+    SEGMENT: ?DT?MAIN
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  FLAG
+    SEGMENT: ?DT?MAIN
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  ?_SDCOMMAND?BYTE
+    SEGMENT: ?DT?_SDCOMMAND?SDCARD
+Program Size: data=164.0 xdata=512 code=3241
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+compiling RC522.C...
+compiling SDCard.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?INITBAUD?SDCARD
+Program Size: data=80.0 xdata=512 code=3638
+creating hex file from "TEST522"...
+"TEST522" - 0 Error(s), 1 Warning(s).
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+compiling RC522.C...
+compiling SDCard.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_READID?SDCARD
+Program Size: data=98.0 xdata=512 code=3546
+creating hex file from "TEST522"...
+"TEST522" - 0 Error(s), 1 Warning(s).
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+compiling RC522.C...
+compiling SDCard.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_READID?SDCARD
+Program Size: data=98.0 xdata=512 code=3546
+creating hex file from "TEST522"...
+"TEST522" - 0 Error(s), 1 Warning(s).
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(139): warning C280: 'admin': unreferenced local variable
+compiling RC522.C...
+compiling SDCard.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELETALLUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ADDUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELETUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_READID?SDCARD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CHECKEXIST?SDCARD
+Program Size: data=126.0 xdata=512 code=3393
+creating hex file from "TEST522"...
+"TEST522" - 0 Error(s), 6 Warning(s).
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(139): warning C280: 'admin': unreferenced local variable
+compiling RC522.C...
+compiling SDCard.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELETALLUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ADDUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELETUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_READID?SDCARD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CHECKEXIST?SDCARD
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_SDWRITEBLOCK?SDCARD
+    LENGTH:  0004H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_WRITEID?SDCARD
+    LENGTH:  0004H
+Program Size: data=135.0 xdata=512 code=3240
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(41): error C202: 'DATA': undefined identifier
+compiling RC522.C...
+compiling SDCard.c...
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(52): error C202: 'DATA': undefined identifier
+compiling RC522.C...
+compiling SDCard.c...
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(43): error C141: syntax error near 'for'
+MAIN.C(43): error C141: syntax error near '=', expected ')'
+MAIN.C(43): error C129: missing ';' before '<'
+compiling RC522.C...
+compiling SDCard.c...
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(54): warning C206: 'writeID': missing function-prototype
+MAIN.C(54): error C267: 'writeID': requires ANSI-style prototype
+compiling RC522.C...
+compiling SDCard.c...
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(52): error C141: syntax error near 'for'
+MAIN.C(52): error C141: syntax error near '=', expected ')'
+MAIN.C(52): error C129: missing ';' before '<'
+compiling RC522.C...
+compiling SDCard.c...
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(139): warning C280: 'admin': unreferenced local variable
+compiling RC522.C...
+compiling SDCard.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELETALLUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ADDUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELETUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_READID?SDCARD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CHECKEXIST?SDCARD
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_SDWRITEBLOCK?SDCARD
+    LENGTH:  0004H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_WRITEID?SDCARD
+    LENGTH:  0004H
+Program Size: data=135.0 xdata=512 code=3240
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+compiling RC522.C...
+compiling SDCard.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELETALLUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ADDUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELETUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_READID?SDCARD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CHECKEXIST?SDCARD
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_SDWRITEBLOCK?SDCARD
+    LENGTH:  0004H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_WRITEID?SDCARD
+    LENGTH:  0004H
+Program Size: data=135.0 xdata=512 code=3267
+Target not created
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(139): warning C280: 'admin': unreferenced local variable
+compiling RC522.C...
+compiling SDCard.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELETALLUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ADDUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELETUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_READID?SDCARD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CHECKEXIST?SDCARD
+Program Size: data=126.0 xdata=512 code=3393
+creating hex file from "TEST522"...
+"TEST522" - 0 Error(s), 6 Warning(s).
+Rebuild target 'ÉäÆµ¶ÁÐ´¿¨Æ÷'
+compiling MAIN.C...
+MAIN.C(139): warning C280: 'admin': unreferenced local variable
+compiling RC522.C...
+compiling SDCard.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELETALLUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ADDUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELETUSER?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_READID?SDCARD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CHECKEXIST?SDCARD
+Program Size: data=126.0 xdata=512 code=3392
+creating hex file from "TEST522"...
+"TEST522" - 0 Error(s), 6 Warning(s).

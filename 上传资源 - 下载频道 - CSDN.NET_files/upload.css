@@ -1,0 +1,30 @@
+﻿@charset "utf-8";
+a.btn {
+	width: 132px;
+	height: 40px;
+	overflow: hidden;
+	display: block;
+	text-decoration: none;
+	background: url(/images/blue_upload_file.png) left top no-repeat;
+}
+
+a.files {
+	background-image: url(/images/blue_upload_file.png);
+}
+
+/*file设为透明，并覆盖整个触发面*/
+a.files input {
+	margin-left: -350px;
+	font-size: 30px;
+	cursor: pointer;
+	filter: alpha(opacity = 0);
+	opacity: 0;
+	height: 100%;
+}
+
+/*取消点击时的虚线框*/
+a.files,a.files input {
+	outline: none; /*ff*/
+	hide-focus: expression(this.hideFocus = true); /*ie*/
+}
+

@@ -1,0 +1,264 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/04/2017  15:02:40  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE bsp_sd.obj, main.obj, bsp_rc522.obj TO TEST522 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  bsp_sd.obj (BSP_SD)
+  main.obj (MAIN)
+  bsp_rc522.obj (BSP_RC522)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?COPY)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTPTR)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTOPTR)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?ISTPTR)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (STRNCMP)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  TEST522 (BSP_SD)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0043H     UNIT         _DATA_GROUP_
+            DATA    004BH     0006H     UNIT         ?DT?MAIN
+            DATA    0051H     0005H     UNIT         ?DT?_DELETUSER?MAIN
+            IDATA   0056H     0001H     UNIT         ?STACK
+
+            * * * * * * *  X D A T A   M E M O R Y  * * * * * * *
+            XDATA   0000H     0200H     UNIT         ?XD?BSP_SD
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0007H     UNIT         ?C_INITSEG
+                    000AH     0001H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     01C3H     UNIT         ?PR?MAIN?MAIN
+            CODE    01D1H     019EH     UNIT         ?PR?_ADDUSER?MAIN
+            CODE    036FH     018FH     UNIT         ?C?LIB_CODE
+            CODE    04FEH     0176H     UNIT         ?PR?_PCDCOMMF522?BSP_RC522
+            CODE    0674H     00F5H     UNIT         ?PR?_DELETUSER?MAIN
+            CODE    0769H     0097H     UNIT         ?PR?_SDWRITEBLOCK?BSP_SD
+            CODE    0800H     008CH     UNIT         ?C_C51STARTUP
+            CODE    088CH     0077H     UNIT         ?PR?_PCDANTICOLL?BSP_RC522
+            CODE    0903H     0076H     UNIT         ?PR?_CALULATECRC?BSP_RC522
+            CODE    0979H     0075H     UNIT         ?PR?_SDREADBLOCK?BSP_SD
+            CODE    09EEH     006FH     UNIT         ?PR?_STRNCMP?STRNCMP
+            CODE    0A5DH     0067H     UNIT         ?PR?SDINIT?BSP_SD
+            CODE    0AC4H     0061H     UNIT         ?PR?_PCDREQUEST?BSP_RC522
+            CODE    0B25H     004FH     UNIT         ?PR?_CHECKEXIST?MAIN
+            CODE    0B74H     004BH     UNIT         ?PR?_M500PCDCONFIGISOTYPE?BSP_RC522
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/04/2017  15:02:40  PAGE 2
+
+
+            CODE    0BBFH     0045H     UNIT         ?PR?DELETALLUSER?MAIN
+            CODE    0C04H     0043H     UNIT         ?PR?_READRAWRC?BSP_RC522
+            CODE    0C47H     003FH     UNIT         ?PR?_WRITERAWRC?BSP_RC522
+            CODE    0C86H     003EH     UNIT         ?PR?PCDRESET?BSP_RC522
+            CODE    0CC4H     003DH     UNIT         ?PR?PCDHALT?BSP_RC522
+            CODE    0D01H     0022H     UNIT         ?PR?_DELAY_10MS?BSP_RC522
+            CODE    0D23H     0020H     UNIT         ?PR?_DELAYMS?BSP_SD
+            CODE    0D43H     0020H     UNIT         ?PR?_SDCOMMAND?BSP_SD
+            CODE    0D63H     0020H     UNIT         ?PR?_FM10MS?MAIN
+            CODE    0D83H     001EH     UNIT         ?PR?TIME0?MAIN
+            CODE    0DA1H     001AH     UNIT         ?PR?_SDWRITE?BSP_SD
+            CODE    0DBBH     0016H     UNIT         ?PR?SDRESPONSE?BSP_SD
+            CODE    0DD1H     0013H     UNIT         ?PR?SDREAD?BSP_SD
+            CODE    0DE4H     0012H     UNIT         ?PR?INITBAUD?BSP_SD
+            CODE    0DF6H     0012H     UNIT         ?PR?_CLEARBITMASK?BSP_RC522
+            CODE    0E08H     0012H     UNIT         ?PR?PCDANTENNAON?BSP_RC522
+            CODE    0E1AH     0010H     UNIT         ?PR?TIMER0INIT?MAIN
+            CODE    0E2AH     0010H     UNIT         ?CO?MAIN
+            CODE    0E3AH     000DH     UNIT         ?PR?_SETBITMASK?BSP_RC522
+            CODE    0E47H     0007H     UNIT         ?PR?PCDANTENNAOFF?BSP_RC522
+
+
+
+OVERLAY MAP OF MODULE:   TEST522 (BSP_SD)
+
+
+SEGMENT                                       DATA_GROUP 
+  +--> CALLED SEGMENT                       START    LENGTH
+-----------------------------------------------------------
+?C_C51STARTUP                               -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                               0008H    000EH
+  +--> ?CO?MAIN
+  +--> ?PR?INITBAUD?BSP_SD
+  +--> ?PR?TIMER0INIT?MAIN
+  +--> ?PR?SDINIT?BSP_SD
+  +--> ?PR?PCDRESET?BSP_RC522
+  +--> ?PR?PCDANTENNAOFF?BSP_RC522
+  +--> ?PR?_DELAY_10MS?BSP_RC522
+  +--> ?PR?PCDANTENNAON?BSP_RC522
+  +--> ?PR?_M500PCDCONFIGISOTYPE?BSP_RC522
+  +--> ?PR?_SDREADBLOCK?BSP_SD
+  +--> ?PR?_FM10MS?MAIN
+  +--> ?PR?_PCDREQUEST?BSP_RC522
+  +--> ?PR?_PCDANTICOLL?BSP_RC522
+  +--> ?PR?_STRNCMP?STRNCMP
+  +--> ?PR?_ADDUSER?MAIN
+  +--> ?PR?_CHECKEXIST?MAIN
+  +--> ?PR?PCDHALT?BSP_RC522
+
+?PR?SDINIT?BSP_SD                           0016H    0004H
+  +--> ?PR?_SDWRITE?BSP_SD
+  +--> ?PR?_SDCOMMAND?BSP_SD
+  +--> ?PR?SDRESPONSE?BSP_SD
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/04/2017  15:02:40  PAGE 3
+
+
+?PR?_SDCOMMAND?BSP_SD                       002AH    0006H
+  +--> ?PR?_SDWRITE?BSP_SD
+
+?PR?SDRESPONSE?BSP_SD                       -----    -----
+  +--> ?PR?SDREAD?BSP_SD
+
+?PR?PCDRESET?BSP_RC522                      -----    -----
+  +--> ?PR?_WRITERAWRC?BSP_RC522
+
+?PR?PCDANTENNAOFF?BSP_RC522                 -----    -----
+  +--> ?PR?_CLEARBITMASK?BSP_RC522
+
+?PR?_CLEARBITMASK?BSP_RC522                 -----    -----
+  +--> ?PR?_READRAWRC?BSP_RC522
+  +--> ?PR?_WRITERAWRC?BSP_RC522
+
+?PR?PCDANTENNAON?BSP_RC522                  -----    -----
+  +--> ?PR?_READRAWRC?BSP_RC522
+  +--> ?PR?_SETBITMASK?BSP_RC522
+
+?PR?_SETBITMASK?BSP_RC522                   -----    -----
+  +--> ?PR?_READRAWRC?BSP_RC522
+  +--> ?PR?_WRITERAWRC?BSP_RC522
+
+?PR?_M500PCDCONFIGISOTYPE?BSP_RC522         -----    -----
+  +--> ?PR?_CLEARBITMASK?BSP_RC522
+  +--> ?PR?_WRITERAWRC?BSP_RC522
+  +--> ?PR?_DELAY_10MS?BSP_RC522
+  +--> ?PR?PCDANTENNAON?BSP_RC522
+
+?PR?_SDREADBLOCK?BSP_SD                     0021H    0009H
+  +--> ?PR?_SDCOMMAND?BSP_SD
+  +--> ?PR?SDRESPONSE?BSP_SD
+  +--> ?PR?SDREAD?BSP_SD
+
+?PR?_FM10MS?MAIN                            0021H    0001H
+  +--> ?PR?_DELAY_10MS?BSP_RC522
+
+?PR?_PCDREQUEST?BSP_RC522                   0021H    0018H
+  +--> ?PR?_CLEARBITMASK?BSP_RC522
+  +--> ?PR?_WRITERAWRC?BSP_RC522
+  +--> ?PR?_SETBITMASK?BSP_RC522
+  +--> ?PR?_PCDCOMMF522?BSP_RC522
+
+?PR?_PCDCOMMF522?BSP_RC522                  003AH    0011H
+  +--> ?PR?_WRITERAWRC?BSP_RC522
+  +--> ?PR?_CLEARBITMASK?BSP_RC522
+  +--> ?PR?_SETBITMASK?BSP_RC522
+  +--> ?PR?_READRAWRC?BSP_RC522
+
+?PR?_PCDANTICOLL?BSP_RC522                  0021H    0019H
+  +--> ?PR?_CLEARBITMASK?BSP_RC522
+  +--> ?PR?_WRITERAWRC?BSP_RC522
+  +--> ?PR?_PCDCOMMF522?BSP_RC522
+  +--> ?PR?_SETBITMASK?BSP_RC522
+
+?PR?_STRNCMP?STRNCMP                        0021H    0008H
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/04/2017  15:02:40  PAGE 4
+
+
+
+?PR?_ADDUSER?MAIN                           0016H    000BH
+  +--> ?CO?MAIN
+  +--> ?PR?_PCDREQUEST?BSP_RC522
+  +--> ?PR?_PCDANTICOLL?BSP_RC522
+  +--> ?PR?_FM10MS?MAIN
+  +--> ?PR?_DELAY_10MS?BSP_RC522
+  +--> ?PR?_STRNCMP?STRNCMP
+  +--> ?PR?_SDWRITEBLOCK?BSP_SD
+  +--> ?PR?_SDREADBLOCK?BSP_SD
+
+?PR?_SDWRITEBLOCK?BSP_SD                    0021H    0009H
+  +--> ?PR?_SDCOMMAND?BSP_SD
+  +--> ?PR?SDRESPONSE?BSP_SD
+  +--> ?PR?_SDWRITE?BSP_SD
+  +--> ?PR?SDREAD?BSP_SD
+
+?PR?_CHECKEXIST?MAIN                        0016H    0007H
+  +--> ?PR?_STRNCMP?STRNCMP
+
+?PR?PCDHALT?BSP_RC522                       0016H    0015H
+  +--> ?PR?_CALULATECRC?BSP_RC522
+  +--> ?PR?_PCDCOMMF522?BSP_RC522
+
+?PR?_CALULATECRC?BSP_RC522                  002BH    0008H
+  +--> ?PR?_CLEARBITMASK?BSP_RC522
+  +--> ?PR?_WRITERAWRC?BSP_RC522
+  +--> ?PR?_SETBITMASK?BSP_RC522
+  +--> ?PR?_READRAWRC?BSP_RC522
+
+
+
+SYMBOL TABLE OF MODULE:  TEST522 (BSP_SD)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C?COPY
+  C:043FH         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
+  -------         MODULE        ?C?CLDPTR
+  C:0465H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CLDOPTR
+  C:047EH         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:04ABH         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?CSTOPTR
+  C:04BDH         PUBLIC        ?C?CSTOPTR
+  -------         ENDMOD        ?C?CSTOPTR
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/04/2017  15:02:40  PAGE 5
+
+
+  -------         MODULE        ?C?ISTPTR
+  C:04DFH         PUBLIC        ?C?ISTPTR
+  -------         ENDMOD        ?C?ISTPTR
+
+  -------         MODULE        STRNCMP
+  D:0021H         PUBLIC        ?_strncmp?BYTE
+  C:09EEH         PUBLIC        _strncmp
+  -------         ENDMOD        STRNCMP
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYMS?BSP_SD
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELETALLUSER?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELETUSER?MAIN
+
+Program Size: data=87.0 xdata=512 code=3661
+LINK/LOCATE RUN COMPLETE.  3 WARNING(S),  0 ERROR(S)
